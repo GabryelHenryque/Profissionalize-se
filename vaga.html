@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="icon" href="./img/icons/icone_1.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/vagas.css">
+   <!-- Linkando o Google Fonts para os icones -->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0"/>
+   <link rel="stylesheet" href="css/chatbot.css">
+  <title>Vagas</title>
+</head>
+
+<body >
+
+  <header>
+    <div class="juju">
+      <button id="chatbot-toggler">
+          <span class="material-symbols-rounded">mode_comment</span>
+          <span class="material-symbols-rounded">close</span>
+      </button>
+      <div class="chatbot-popup">
+          <!-- Chatbot Header -->
+          <div class="chat-header">
+              <div class="header-info">
+                  <div class="chatbot-logo">
+                      <img class="chatbot-logo" src="./img/icons/juju.jpeg" width="50" height="50" alt="icone da juju">
+                  </div>     
+                  <h2 class="logo-text">Juju</h2>
+              </div>
+              <button id="close-chatbot" class="material-symbols-rounded">
+                  keyboard_arrow_down
+              </button>
+          </div>
+          <!-- Chatbot Body -->
+          <div class="chat-body">
+              <div class="message bot-message">
+                  <div class="bot-avatar">
+                      <img class="bot-avatar" src="./img/icons/juju.jpeg" width="50" height="50" alt="icone da juju">
+                  </div> 
+                  <div class="message-text">Olá, eu sou a Juju!<br>
+                  Em que posso ajudar?</div>
+              </div>
+          </div>
+          <!-- Chatbot Footer -->
+          <div class="chat-footer">
+              <form action="#" class="chat-form">
+                  <textarea placeholder="Digite uma mensagem..." class="message-input" required></textarea>
+                  <div class="chat-controls">
+                      <button type="button" id="emoji-picker" class="material-symbols-outlined">sentiment_satisfied</button>
+                      <div class="file-upload-wrapper">
+                          <input type="file" accept="images/*" id="file-input" hidden>
+                          <img src="#">
+                          <button type="button" id="file-upload" class="material-symbols-rounded">attach_file</button>
+                          <button type="button" id="file-cancel" class="material-symbols-rounded">close</button>
+                      </div>
+                      <button type="submit" id="send-message" class="material-symbols-rounded">arrow_upward</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+      <!-- Linkando os emojis para o chat -->
+      <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+      <script src="js/chatbot.js"></script>
+  </div>
+    <!--navegação - NAV-->
+    <div class="navbar-box">
+      <nav class="navbar">
+        <div class="navbar-container">
+          <div class="navbar-links">
+            <a class="nav-link" href="./inicio.html">Inicio</a>
+            <a class="nav-link active" href="./vagas.html">Vagas</a>
+            <a class="nav-link" href="./perfil.html">Perfil</a>
+          </div>
+        </div>
+      </nav>
+   </div>
+    <!-- <div class="header-text  ">
+      <p id="nickname" class="nickname">Nickname User</p>
+    </div> -->
+  </header>
+  <main>
+   
+    <section class="section-tinder">         
+   
+      <input type="radio" name="position" id="Cradio_1"/>
+      <input type="radio" name="position" id="Cradio_2"/>
+      <input type="radio" name="position" id="Cradio_3"/>
+
+      
+      <div class="carousel-button">
+        <button id="arrow_left" onclick="arrowLeft()"><img src="./img/icons/arrow_left.svg" alt=""></button>
+        <button id="arrow_star"><img src="./img/icons/favoriteStar_icon.svg" alt=""></button>
+        <button id="arrow_right" ><img src="./img/icons/arrow_right.svg" alt=""></button>
+      </div> 
+      
+      <main id="carousel">
+        <div class="item" id="section_vaga_recomendada_1">
+          <h1 style="font-size: 48px;">vagas recomendadas</h1 >
+        </div>
+        <div class="item" id="section_vaga_recomendada_2"></div>
+        <div class="item" id="section_vaga_recomendada_3"></div>
+      </main>
+    
+    </section>
+    <div class="line-horizontal"></div>
+
+<!--     
+    <section class="section-search ">
+      <form class="search-form container d-flex justify-content-center " role="search">
+
+        <div class="input-group rounded-pill">
+          <input class="search-text form-control border-0 bg-transparent " type="search" placeholder="Search"
+            aria-label="Search">
+          <img src="./img/icons/line.svg">
+
+          <input id="search_dropdown_locate " class="search-text form-control border-0 bg-transparent" type="search"
+            placeholder="Localização" aria-label="Search" data-bs-toggle="dropdown" aria-expanded="false">
+
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#"
+                onclick="document.getElementById('search_dropdown_locate').value='Action'; return false;">Action</a>
+            </li>
+            <li><a class="dropdown-item" href="#"
+                onclick="document.getElementById('search_dropdown_locate').value='Another action'; return false;">Another
+                action</a></li>
+            <li><a class="dropdown-item" href="#"
+                onclick="document.getElementById('search_dropdown_locate').value='Something else here'; return false;">Something
+                else here</a></li>
+          </ul>
+        </div>
+        <button class="search-buttom btn rounded-pill  " type="submit"><img src="./img/icons/search_icon.svg"></button>
+      </form>
+    </section> -->
+ 
+    <section id="section-vaga-recomendada"></section>
+    <section id="section-vaga"></section>
+  </main>
+  <footer>  
+    <div class="footer-shadow"></div>
+    <div class="footer-up">
+        <h3>Social</h3>
+    </div>
+    <div class="footer-main">
+
+        <div class="footer-left">
+            <a href="https://github.com/sarahcrispro" class="a" draggable="false" target="_blank">Sarah Cristina</a>
+            <a href="https://github.com/pedrosantos252" class="a" draggable="false" target="_blank">Pedro Emanoel</a>
+            <a href="https://github.com/GabryelHenryque/" class="a" draggable="false" target="_blank">Gabriel Henrique</a>
+            <a href="https://github.com/queziaqsp" class="a" draggable="false" target="_blank">Quezia dos Santos</a>
+            <a href="https://github.com/RicardoEvangelistaDosSantos" class="a" draggable="false" target="_blank">Ricardo Evangelista</a>
+        </div>
+        <div class="div-line"></div>
+
+        <div class="footer-center">
+            <section class="footerC-instagram">
+               <a href="https://www.instagram.com/profissionalize_se1/" draggable="false" target="_blank"><img class="icon-footer" src="./img/icons/instagram_icon.svg" style="width: 65px;" alt="icone do instargram"></a>
+            </section>
+            <section class="footerC-github">
+               <a href="https://github.com/RicardoEvangelistaDosSantos/Profissionalize-se?tab=readme-ov-file#profissionalize-se" draggable="false" target="_blank"><img  class="icon-footer" src="./css/img-background/icone_2.svg" style="width: 100px;" alt="icone da logo da empresa"></a> 
+            </section>
+            <section class="footerC-linkedin">
+                <a href="mailto:profissionalizeseofc@gmail.com" draggable="false">
+                    <img class="icon-footer" src="./img/icons/gmail_icon.svg" style="width: 65px;" alt="icone do gmail">
+                  </a>
+            </section>
+        </div>
+        <div class="div-line"></div>
+
+        <div class="footer-right ">
+            <a class="a" href="./termouso.html" draggable="false">Temos de Uso</a>
+            <a class="a" href="./politica.html" draggable="false">Politica De Privacidade</a>
+            <!-- <a class="a" href="#" draggable="false">Falar com nosso chatBot</a> -->
+        </div>
+    </div> 
+    <div class="footer-bottom">
+        <div class="bottom-line"></div>
+        <p>© Copyright - Todos os direitos reservados a Profissionalize-se. 2024</p>
+    </div>
+</footer> 
+  <script src="js/vaga.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+/*deoxa a rolagem suave*/
+html {
+    scroll-behavior: smooth; /* Rola suavemente para as âncoras */
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+/*cores*/
+:root{
+    --background_color: #0d0d2b;
+    --background_color_two: #131335; 
+    
+    --main_one: #A40148;
+    --main_two: #790034;
+    --second_color: rgb(46, 46, 98);
+
+    --text_one:#ffffff;
+    --text_two:#bdbdbd;
+}
+
+/*scrollbar*/
+::-webkit-scrollbar{
+
+    height: 10px;
+    width: 5px;
+    
+    /*animation: background-bar 4s alternate infinite;*/
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--text_two);
+    
+}
+::-webkit-scrollbar-track{
+    background-color: var(--background_color);
+    height: 10px;
+    margin: 2px;
+}
+::-webkit-scrollbar-button{
+    background-color: var(--background_color);
+    height: 2px;
+}
+
+
+
+/*botão de voltar*/
+.return{
+    position: fixed;
+    left: 40px;
+    top: 30px;
+}
+
+.return img:hover {
+    transform: scale(1.1);
+}
+.return  img:active{
+    transform:scale(0.9);
+    filter: brightness(0) saturate(100%) invert(7%) sepia(91%) saturate(6405%) hue-rotate(328deg) brightness(106%) contrast(100%);
+}
+
+.section-line{
+    border: solid 1px;
+    border-left: var(--text_one) ;
+    width: 1px;
+    height: 100%;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+body {
+    margin: 5% 10% 5% 10%;
+    background-color:var(--main_two);
+    color: white;
+}
+
+h2, h3 {
+    margin-top: 30px;
+}
+a{
+    color: var(--text_one);
+}
